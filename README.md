@@ -6,9 +6,9 @@
 2. Verifique si tiene la versión de Unity 2021.3.10f1, si no fuere el caso, descarguela e instalela.
 3. Descargue e imprima las siguientes images: La primera denominada aruco y la segunda vuforia.
 
-![aruco](https://github.com/Ajmyquira/Angrybirds3d/blob/master/Img/aruco.jpeg)
+![aruco](https://github.com/Ajmyquira/AngrybirdsAR/blob/master/Assets/Img/aruco.jpeg)
 
-![vuforia](https://github.com/Ajmyquira/Angrybirds3d/blob/master/Img/vuforia.jpeg)
+![vuforia](https://github.com/Ajmyquira/AngrybirdsAR/blob/master/Assets/Img/vuforia.jpeg)
 
 4. Debe tener dos camaras conectas para poder jugar.
 5. Al momento de iniciado el juego, se mostrara solo una camara. Coloque la imagen de vuforia al frente de la cámara hasta que aparezca el mapa.
