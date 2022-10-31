@@ -29,28 +29,28 @@ public class Bird : MonoBehaviour
                 refInitPos = GetComponent<Transform>().position;
                 firstShot = false;
             }
-            Debug.Log("Ref: " + refInitPos);
+            //Debug.Log("Ref: " + refInitPos);
 
             Vector3 initPos = GetComponent<Transform>().position;
-            Debug.Log("Cur: " + initPos);
+            //Debug.Log("Cur: " + initPos);
             Vector3 finalPos = initPos + destPos;
 
-            Rb.position = finalPos;
-            Debug.Log("Rb position: " + Rb.position);
-
             // Delimiting the movement
-            /*float x_s = refInitPos.x + 4;
+            float x_s = refInitPos.x + 4;
             float x_i = refInitPos.x - 4;
             float y_s = refInitPos.y + 2;
             float y_i = refInitPos.y - 2;
-            float z_s = refInitPos.z;
+            float z_s = refInitPos.z + 1;
             float z_i = refInitPos.z - 7;
-            if (finalPos.x < x_s && finalPos.x > x_i && finalPos.y < y_s && finalPos.y > y_i &&
-                finalPos.z < z_s && finalPos.z > z_i)
-            {
-                Rb.position = finalPos;
-                Debug.Log("Rb position: " + Rb.position);
-            }*/
+            if (finalPos.x < x_i) { finalPos.x = x_i; }
+            if (finalPos.x > x_s) { finalPos.x = x_s; }
+            if (finalPos.y < y_i) { finalPos.y = y_i; }
+            if (finalPos.y > y_s) { finalPos.y = y_s; }
+            if (finalPos.z < z_i) { finalPos.z = z_i; }
+            if (finalPos.z > z_s) { finalPos.z = z_s; }
+
+            Rb.position = finalPos;
+            Debug.Log("Rb position: " + Rb.position);
         }
     }
 
