@@ -50,7 +50,7 @@ public class Bird : MonoBehaviour
             if (finalPos.z > z_s) { finalPos.z = z_s; }
 
             Rb.position = finalPos;
-            Debug.Log("Rb position: " + Rb.position);
+            //Debug.Log("Rb position: " + Rb.position);
         }
     }
 
