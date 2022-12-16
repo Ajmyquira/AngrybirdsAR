@@ -18,15 +18,15 @@ public class PlayerManager : MonoBehaviourPunCallbacks
         if (PhotonNetwork.IsMasterClient)
         {
             Vector3 initPosition = new Vector3(-30, 15, 50);
-            //PhotonNetwork.Instantiate(player1Prefab.name, initPosition, Quaternion.Euler(90, -90, -270));
-            PhotonNetwork.Instantiate(player2Prefab.name, initPosition, Quaternion.Euler(90, -90, -270));
+            PhotonNetwork.Instantiate(player1Prefab.name, initPosition, Quaternion.Euler(90, -90, -270));
+            //PhotonNetwork.Instantiate(player2Prefab.name, initPosition, Quaternion.Euler(90, -90, -270));
             Debug.Log("Player 1 instantiated: I'm the master client");
         }
         else
         {
             Vector3 initPosition = new Vector3(30, 10, 20);
-            PhotonNetwork.Instantiate(player1Prefab.name, initPosition, Quaternion.Euler(90, -90, -270));
-            //PhotonNetwork.Instantiate(player2Prefab.name, initPosition, Quaternion.Euler(90, -90, -270));
+            //PhotonNetwork.Instantiate(player1Prefab.name, initPosition, Quaternion.Euler(90, -90, -270));
+            PhotonNetwork.Instantiate(player2Prefab.name, initPosition, Quaternion.Euler(90, -90, -270));
             Debug.Log("Player 2 instantiated: I'm not the master client");
         }
     }
