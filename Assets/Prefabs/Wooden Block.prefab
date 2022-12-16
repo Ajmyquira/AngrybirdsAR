@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 5602933820642009203}
   - component: {fileID: 4496899374117213941}
   - component: {fileID: -1329284647813443638}
+  - component: {fileID: 1780093132253013513}
+  - component: {fileID: 1294619266500936176}
   m_Layer: 0
   m_Name: Wooden Block
   m_TagString: Untagged
@@ -32,6 +34,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.18, y: 3.39, z: 4.371334}
   m_LocalScale: {x: 1, y: 8, z: 2}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -55,6 +58,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -128,6 +132,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WoodShatter: {fileID: 8313402609560572699, guid: 07c412bc21bb1467dbba12d6c6bb696a, type: 3}
   WoodCollision: {fileID: -1329284647813443638}
+  destPos: {x: 0, y: 0, z: 0}
+  groundPos: {x: 0, y: 0, z: 0}
+  kinematic: 0
 --- !u!82 &-1329284647813443638
 AudioSource:
   m_ObjectHideFlags: 0
@@ -224,3 +231,42 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1780093132253013513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7428645006852782802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents:
+  - {fileID: 1294619266500936176}
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &1294619266500936176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7428645006852782802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1

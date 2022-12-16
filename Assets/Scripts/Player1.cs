@@ -1,5 +1,8 @@
 using System;
+using System.Linq;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Windows.Speech;
 using Photon.Pun;
 using Photon.Realtime;
 using OpenCvSharp;
@@ -21,6 +24,10 @@ public class Player1 : MonoBehaviourPunCallbacks
     int[] ids;
     Point2f[][] rejectedImgPoints;
 
+    // Voice recognition variables
+    KeywordRecognizer keywordRecognizer;
+    Dictionary<string, Action> wordToAction;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,8 +39,16 @@ public class Player1 : MonoBehaviourPunCallbacks
 
         // Referring the instanced object
         bird = GameObject.Find("Slingshot Bird(Clone)");
-    }
 
+        // Voice recognition part
+        wordToAction = new Dictionary<string, Action>();
+        wordToAction.Add("dispara", Shoot);
+        wordToAction.Add("sujeta", Hold);
+        
+        keywordRecognizer = new KeywordRecognizer(wordToAction.Keys.ToArray());
+        keywordRecognizer.OnPhraseRecognized += WordRecognizer;
+        keywordRecognizer.Start();
+    }
     // Update is called once per frame
     void Update()
     {
@@ -47,11 +62,21 @@ public class Player1 : MonoBehaviourPunCallbacks
             FindAruco(frame, grayFrame);
         }
     }
-    public override void OnPlayerLeftRoom(Player otherPlayer)
+    // Voice recognition functions
+    private void Hold()
     {
-        tex.Stop();
+        bird.GetComponent<Bird>().HoldEvent();
     }
-
+    private void Shoot()
+    {
+        bird.GetComponent<Bird>().ShootEvent();
+    }
+    private void WordRecognizer(PhraseRecognizedEventArgs word)
+    {
+        // Debug.Log(word.text);
+        // Calling the Hold or Shoot function
+        wordToAction[word.text].Invoke();
+    }
     private void FindAruco(Mat frame, Mat grayFrame)
     {
         // Detect and draw markers
@@ -117,5 +142,9 @@ public class Player1 : MonoBehaviourPunCallbacks
             Math.Pow(corners[0][3].Y - corners[0][0].Y, 2));
         double perimeter = distance1 + distance2 + distance3 + distance4;
         return perimeter;
+    }
+    public override void OnPlayerLeftRoom(Player otherPlayer)
+    {
+        tex.Stop();
     }
 }

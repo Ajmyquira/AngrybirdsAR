@@ -178,6 +178,8 @@ GameObject:
   - component: {fileID: 1893393747154166390}
   - component: {fileID: -7814662578491550783}
   - component: {fileID: -7550128794887904735}
+  - component: {fileID: -2926879741151694414}
+  - component: {fileID: -1256987339405546015}
   m_Layer: 0
   m_Name: Pig
   m_TagString: Pig
@@ -248,6 +250,47 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Smoke: {fileID: 683210327174122873, guid: e28ac3b131d1d4e378f1c1cec187084f, type: 3}
+  destPos: {x: 0, y: 0, z: 0}
+  groundPos: {x: 0, y: 0, z: 0}
+  kinematic: 0
+--- !u!114 &-2926879741151694414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3058896548978358263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &-1256987339405546015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3058896548978358263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1
 --- !u!1 &3730633885232561078
 GameObject:
   m_ObjectHideFlags: 0

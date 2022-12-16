@@ -165,3 +165,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2006320ab437134e9676ba50a87ceec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RemainingPigs: 0
+  RemainingWoods: 0
+  RemainingIces: 0
+  numObject: 0
+  numWordRecognized: -1

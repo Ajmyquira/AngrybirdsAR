@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic; 
+﻿using System.Collections; 
 using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using UnityEngine.Windows.Speech;
 
 public class GameManager : MonoBehaviour
 {
@@ -39,10 +36,6 @@ public class GameManager : MonoBehaviour
     GameObject stillBird;
     private GameObject[] stillBirds;
 
-    // Voice recognition variables
-    KeywordRecognizer keywordRecognizer;
-    Dictionary<string, Action> wordToAction;
-
     void Start()
     {
         if (Instance == null)
@@ -52,35 +45,7 @@ public class GameManager : MonoBehaviour
         int level = SceneManager.GetActiveScene().buildIndex;
         HighscoreText.text = GetHighscore(level).ToString();
         SetNewBird();
-
-        // Voice recognition part
-        wordToAction = new Dictionary<string, Action>();
-        wordToAction.Add("dispara", Shoot);
-        wordToAction.Add("sujeta", Hold);
-
-        keywordRecognizer = new KeywordRecognizer(wordToAction.Keys.ToArray());
-        keywordRecognizer.OnPhraseRecognized += WordRecognizer;
-        keywordRecognizer.Start();
     }
-
-    private void Hold()
-    {
-        //bird.GetComponent<Bird>()._isPressed = true;
-        bird.GetComponent<Bird>().HoldEvent();
-    }
-
-    private void Shoot()
-    {
-        //bird.GetComponent<Bird>()._isPressed = false;
-        bird.GetComponent<Bird>().ShootEvent();
-    }
-
-    private void WordRecognizer(PhraseRecognizedEventArgs word)
-    {
-        // Debug.Log(word.text);
-        wordToAction[word.text].Invoke(); // Calling the Hold or Shoot function
-    }
-
     void Update()
     {
         if (!IsLevelCleared && GameObject.FindGameObjectsWithTag("Pig").Length == 0)
