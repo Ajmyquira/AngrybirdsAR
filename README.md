@@ -5,13 +5,15 @@ El proyecto final consiste en hacer el juego de Angry Birds 3D en realidad aumen
 ## REQUISITOS
 
 ● 4 cámaras web: 
-  ○ 2 cámaras para el jugador 1.
-  ○ 2 cámaras para el jugador 2.
+
+    ○ 2 cámaras para el jugador 1.
+    ○ 2 cámaras para el jugador 2.
   
 ● 3 pdf impresos:
-  ○ 1 pdf del marcador aruco para jugador 1.
-  ○ 1 pdf del marcador aruco para jugador 2.
-  ○ 1 pdf del marcador vuforia para el mapa.
+
+    ○ 1 pdf del marcador aruco para jugador 1.
+    ○ 1 pdf del marcador aruco para jugador 2.
+    ○ 1 pdf del marcador vuforia para el mapa.
 
 ## Instructivo General
 
@@ -23,7 +25,7 @@ El proyecto final consiste en hacer el juego de Angry Birds 3D en realidad aumen
 
 ![vuforia](https://github.com/Ajmyquira/AngrybirdsAR/blob/master/Assets/Img/vuforia.jpeg)
 
-![vuforia](https://github.com/Ajmyquira/AngrybirdsAR/blob/master/Assets/Img/vuforia2.jpeg)
+![vuforia2](https://github.com/Ajmyquira/AngrybirdsAR/blob/master/Assets/Img/vuforia2.jpeg)
 
 4. Debe tener dos cámaras conectas para poder jugar, esto es para cada jugador.
 5. Al momento de iniciar el juego, se mostrará solo una cámara. Coloque la imagen de vuforia al frente de la cámara hasta que aparezca el mapa en realidad aumentada.
@@ -31,9 +33,9 @@ El proyecto final consiste en hacer el juego de Angry Birds 3D en realidad aumen
 
 ## Si eres el jugador 1 debes saber que tú colocas los objetos:
 
-  ● Debes tener dos cámaras conectadas al juego: una cámara para  mostrar el mapa y otra para mostrar el marcador aruco.
-  ● Tienes 3 objetos de vidrio, 3 objetos de madera y 3 cerditos para colocar en todo el mapa.
-  ● Sin embargo, te aconsejamos colocarlos en el piso porque luego se activa la gravedad y se caen los objetos.
+    ● Debes tener dos cámaras conectadas al juego: una cámara para  mostrar el mapa y otra para mostrar el marcador aruco.
+    ● Tienes 3 objetos de vidrio, 3 objetos de madera y 3 cerditos para colocar en todo el mapa.
+    ● Sin embargo, te aconsejamos colocarlos en el piso porque luego se activa la gravedad y se caen los objetos.
   
 1. Enfocar una cámara al marcador vuforia del mapa para que aparezca.
 2. Decir la palabra correspondiente para colocar el objeto que quieras y aparezca: “BLOCK” = bloque de madera, “GLASS” = bloque de vidrio y “GREEN” = cerdito.
@@ -44,9 +46,9 @@ Recuerda que solo tienes 3 objetos de cada uno y una vez que coloques todos se a
 
 ## Si eres el jugador 2 debes saber que tú derribas los objetos:
 
-  ● Debes tener dos cámaras conectadas al juego: una cámara para mostrar el mapa y otra para mostrar el marcador aruco.
-  ● Tienes 3 oportunidades para lanzar pájaros.
-  ● Debes derribar a todos los cerditos para ganar.
+    ● Debes tener dos cámaras conectadas al juego: una cámara para mostrar el mapa y otra para mostrar el marcador aruco.
+    ● Tienes 3 oportunidades para lanzar pájaros.
+    ● Debes derribar a todos los cerditos para ganar.
   
 1. Enfocar una cámara al marcador vuforia del mapa para que aparezca.
 2. Debes mostrar a la otra cámara el marcador aruco correspondiente para que puedas mover el pájaro.
@@ -55,4 +57,17 @@ Recuerda que solo tienes 3 objetos de cada uno y una vez que coloques todos se a
 
 Recuerda que cada objeto que derribes tiene un puntaje correspondiente, pero para ganar debes derribar todos los cerditos.
 
-Psdt: Para visualizar mejor el proyecto y tener como referencia cómo se juega según cada jugador, revisa en la carpeta de Videos del proyecto.
+## Videos referenciales
+Para visualizar mejor el proyecto y tener como referencia cómo se juega según cada jugador, revisa en la carpeta de Videos del proyecto.
+
+### Para el jugador 1:
+
+https://user-images.githubusercontent.com/42581109/208214926-c2b67f5d-b76a-4696-880d-2f9c91cd6309.mp4
+
+https://github.com/Ajmyquira/AngrybirdsAR/blob/master/Videos/Player1funcionality.mp4
+
+### Para el jugador 2:
+
+https://user-images.githubusercontent.com/42581109/208216115-26c1efed-2a80-4bc5-8e55-ec1df83da3e3.mp4
+
+https://github.com/Ajmyquira/AngrybirdsAR/blob/master/Videos/Player2funcionality.mkv
